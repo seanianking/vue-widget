@@ -11,5 +11,6 @@ module.exports = {
     config => {
       config.optimization.delete('splitChunks')
     },
-  filenameHashing: false
+  filenameHashing: false,
+  publicPath: process.env.NODE_ENV === 'production' ? '/vue-widget-poc/' : '/'
 }
